@@ -57,7 +57,7 @@ type Props = NavigationSceneRendererProps & {
   style: any,
 };
 
-const { PropTypes } = React;
+import PropTypes from 'prop-types';
 
 /**
  * Component that renders the scene as card for the <NavigationCardStack />.
