@@ -49,8 +49,9 @@ import PropTypes from 'prop-types';
 
 const DefaultTransitionSpec = {
   duration: 250,
-  easing: Easing.inOut(Easing.ease),
+  easing: Easing.inOut(Easing.quad),
   timing: Animated.timing,
+  useNativeDriver: true
 };
 
 class NavigationTransitioner extends React.Component<any, Props, State> {
