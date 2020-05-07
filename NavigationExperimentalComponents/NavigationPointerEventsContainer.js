@@ -63,7 +63,7 @@ function create(Component: ReactClass<any>): ReactClass<any> {
       this._pointerEvents = this._computePointerEvents();
     }
 
-    componentWillMount(): void {
+    UNSAFE_componentWillMount(): void {
       this._onPositionChange = this._onPositionChange.bind(this);
       this._onComponentRef = this._onComponentRef.bind(this);
     }
@@ -76,7 +76,7 @@ function create(Component: ReactClass<any>): ReactClass<any> {
       this._positionListener && this._positionListener.remove();
     }
 
-    componentWillReceiveProps(nextProps: Props): void {
+    UNSAFE_componentWillReceiveProps(nextProps: Props): void {
       this._bindPosition(nextProps);
     }
 
